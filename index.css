@@ -1,0 +1,497 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
+}
+
+:root {
+   --1stGreen: #0d4b58;
+   --2ndGreen: #015366;
+   --lgtGreen: #a7d1d2;
+   --lgtGreen2: #e0f4f5;
+}
+
+html {
+   font-size: 10px;
+}
+
+/* ========== header section =========== */
+header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   background-color: var(--1stGreen);
+   padding: 0.8rem 0;
+}
+
+header img {
+   width: 7rem;
+   aspect-ratio: 1/1;
+   object-position: center;
+   border-radius: 50%;
+}
+
+header a {
+   text-decoration: none;
+   font-weight: 900;
+   display: flex;
+}
+
+header h1 {
+   color: white;
+   font-weight: 1000;
+   font-size: 3.5rem;
+   letter-spacing: 0.2rem;
+}
+/* ========== end of header section =========== */
+
+
+
+/* ========== navigation bar ============= */
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: var(--lgtGreen);
+   padding: 1.2rem 5%;
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+nav ul {
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+nav ul a {
+   text-decoration: none;
+   color: #0d4b58;
+   font-size: 1.9rem;
+   font-weight: 900;
+   letter-spacing: 0.15rem;
+   /* background-color: red; */
+   padding: 0.3rem 1.5rem;
+   border-radius: 2.5rem;
+   transition: all 0.4s;
+}
+
+nav ul a:hover {
+   background-color: var(--1stGreen);
+   color: var(--lgtGreen);
+}
+
+nav input {
+   width: 30rem;
+   outline: none;
+   font-size: 1.5rem;
+   letter-spacing: 0.1rem;
+   padding: 0.8rem 1.5rem 0.8rem 3rem;
+   border-radius: 2.5rem;
+   border: 0.15rem solid var(--1stGreen);
+   background-image: url('searchIcon2.png');
+   background-size: 2.5rem;
+   background-repeat: no-repeat;
+   background-position: 91% 50%;
+}
+/* ========== end of navigation section ============ */
+
+
+
+/* =========== hero section =========== */
+.hero {
+   display: grid;
+   grid-template-columns: 6.4fr 3.5fr;
+   grid-template-rows: 40rem;
+   background-color: aqua;
+   margin: 3rem auto 0;
+   width: 95%;
+   border-radius: 1rem;
+   overflow: hidden;
+}
+
+.hero > div:first-child {
+   display: flex;
+   position: relative;
+}
+
+.hero > div:first-child > img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-position: center;
+   object-fit: cover;
+   object-position: center;
+}
+
+.hero > div:first-child > img:first-child {
+   animation: img1 15s linear infinite;
+}
+@keyframes img1 {
+   0%, 32% {opacity: 1;}
+   34% , 98% {opacity: 0;}
+   99.5%, 100% {opacity: 1;}
+}
+
+.hero > div:first-child > img:nth-child(2) {
+   animation: img2 15s linear infinite;
+   object-position: 50% 55%;
+}
+@keyframes img2 {
+   0%, 31% {opacity: 0;}
+   36%, 61% {opacity: 1;}
+   65%, 100% {opacity: 0;}
+}
+
+.hero > div:first-child > img:nth-child(3) {
+   animation: img3 15s linear infinite;
+   object-position: 50% 75%;
+}
+@keyframes img3 {
+   0%, 32%, 99.5%, 100% {opacity: 0;}
+   34%, 61% {opacity: 0;}
+   65%, 98% {opacity: 1;}
+}
+
+.hero > div:nth-child(2) {
+   background-color: #0d4b58;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem 5rem;
+   gap: 3rem;
+}
+
+.hero > div:nth-child(2) > img {
+   width: 10rem;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+}
+
+.hero > div:nth-child(2) > h2 {
+   width: fit-content;
+   text-align: center;
+   font-size: 2rem;
+   line-height: 2.5rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+}
+
+.hero > div:nth-child(2) > div {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.hero > div:nth-child(2) > div a {
+   color: white;
+   text-decoration: none;
+   font-size: 2rem;
+   line-height: 0;
+   transition: all 0.4s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background-color: red; */
+   border-radius: 50%;
+   width: 3.7rem;
+   aspect-ratio: 1/1;
+}
+
+.hero > div:nth-child(2) > div a:hover {
+   color: var(--1stGreen);
+   background-color: var(--lgtGreen);
+}
+/* =========== end of hero section ============== */
+
+
+
+/* =============== What we do section ================= */
+.whatWeDo {
+   margin-top: 10rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4rem;
+   /* background-color: antiquewhite; */
+   padding: 0;
+}
+
+.whatWeDo > h2 {
+   font-size: 4rem;
+   line-height: 4rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   color: var(--1stGreen);
+}
+
+.whatWeDo > ul {
+   list-style-type: none;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto;
+   gap: 5rem;
+   width: 87%;
+}
+
+.whatWeDo > ul > li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--lgtGreen2);
+   gap: 1.7rem;
+   padding: 3.5rem 2rem;
+   border-radius: 1.5rem;
+   box-shadow: 0 0 0.7rem var(--lgtGreen);
+}
+
+.whatWeDo > ul > li > h3 {
+   font-size: 2rem;
+   line-height: 2rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   color: var(--2ndGreen);
+}
+
+.whatWeDo > ul > li > p {
+   font-size: 1.6rem;
+   font-weight: 700;
+   color: #2f2a25;
+   text-align: center;
+   letter-spacing: 0.1rem;
+}
+
+.whatWeDo > ul > li > a {
+   text-decoration: none;
+   background-color: var(--1stGreen);
+   color: white;
+   font-size: 1.6rem;
+   line-height: 1.5rem;
+   letter-spacing: 0.1rem;
+   font-weight: 900;
+   border-radius: 1rem;
+   padding: 0.8rem 1.3rem;
+   margin-top: 2rem;
+}
+/* =============== end of What we do section ================= */
+
+
+
+/* =============== gallery section ================= */
+.gallerySection {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   justify-content: center;
+   margin-top: 10rem;
+   padding: 0 4%;
+   width: 100%;
+}
+
+.gallerySection > h2 {
+   font-size: 4rem;
+   font-weight: 900;
+   color: var(--1stGreen);
+   letter-spacing: 0.1rem;
+}
+
+.galleryGrid {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 50rem;
+   background-color: var(--lgtGreen);
+   gap: 2rem;
+   padding: 2rem;
+   border-radius: 0.8rem;
+}
+
+.galleryGrid > div:first-child {
+   border: 0.15rem solid #2f2a25;
+   border-radius: 0.5rem;
+   overflow: hidden;
+}
+
+.galleryGrid > div:first-child > img {
+   width: 100%;
+   height: 100%;
+   object-position: center;
+   object-fit: cover;
+}
+
+/* == subgrid gallery == */
+.galleryGrid > div:nth-child(2) {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   place-items: center;
+   gap: 2rem;
+}
+
+.galleryGrid > div:nth-child(2) > div {
+   display: flex;
+   aspect-ratio: 1/1;
+   /* width: 9rem; */
+   /* border: 0.2rem solid #2f2a25; */
+   border-radius: 0.5rem;
+   box-shadow: 0 0 0.8rem var(--2ndGreen), 0 0 1.2rem var(--lgtGreen2);
+   overflow: hidden;
+}
+
+.galleryGrid > div:nth-child(2) > div > img {
+   width: 100%;
+   height: 100%;
+   object-position: center;
+}
+
+.nailMarqueeSec {
+   overflow: hidden;
+   margin-top: 9rem;
+}
+
+.marqueeDiv {
+   display: flex;
+   align-items: center;
+   gap: 4rem;
+   box-shadow: 0 0 0.5rem gray;
+   white-space: nowrap;
+   padding: 0 2rem;
+   animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+   0% {translate: 0;}
+   100% {translate: -50%;}
+}
+
+.marqueeDiv > div {
+   width: 20rem;
+   aspect-ratio: 1/1;
+   border-radius: 1rem;
+   overflow: hidden;
+}
+
+.marqueeDiv > div > img {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   object-fit: cover;
+   object-position: center;
+}
+
+/* ======= footer section ====== */
+footer {
+   margin-top: 8rem;
+   background-color: var(--1stGreen);
+   color: white;
+   display: grid;
+   grid-template-columns: 1.6fr 1fr 1fr;
+   grid-template-rows: 1fr;
+   padding: 5rem 5% 6rem;
+}
+
+.footerCol1 {
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+}
+
+.footerCol1 > ul {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.footerCol1 > ul > li {
+   display: flex;
+   gap: 1rem;
+}
+
+.footerCol1 > ul > li > b {
+   font-size: 1.8rem;
+   font-weight: 800;
+   letter-spacing: 0.1rem;
+}
+
+.footerCol1 > ul > li > span {
+   font-size: 1.7rem;
+   letter-spacing: 0.1rem;
+}
+
+.footerCol1 > div {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.footerCol1 > div > a {
+   text-decoration: none;
+   color: white;
+   font-size: 2.7rem;
+   /* line-height: 0; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background-color: red; */
+   border-radius: 50%;
+   width: 4.3rem;
+   aspect-ratio: 1/1;
+   transition: all 0.5s;
+}
+
+.footerCol1 > div > a:hover {
+   background-color: var(--lgtGreen);
+   color: var(--1stGreen);
+}
+
+.footerCol2 {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.footerCol2 > li > a {
+   text-decoration: none;
+   color: white;
+   font-size: 1.7rem;
+   font-weight: 800;
+   letter-spacing: 0.15rem;
+}
+
+.footerCol3 {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 3rem;
+}
+
+.footerCol3 > span {
+   font-size: 1.5rem;
+   letter-spacing: 0.1rem;
+}
+
+.footerCol3 > div {
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   gap: 1rem;
+}
+
+.footerCol3 > div > span {
+   font-size: 1.5rem;
+   font-weight: 800;
+   letter-spacing: 0.1rem;
+}
+
+.footerCol3 > div img {
+   width: 10rem;
+   border-radius: 0.3rem;
+}
